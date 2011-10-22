@@ -95,6 +95,9 @@ $(document).ready(function(){
    $.get("textData/quotes.txt", function(result){
     var quotes = result.split("\n");
     var randomnumber=Math.floor(Math.random()*quotes.length);
+    if(randomnumber >= quotes.length){
+       randomnumber = 0;
+    }
     var selectedQuote = quotes[randomnumber];
     $("#quotesDiv").html(selectedQuote);
   });
@@ -112,6 +115,13 @@ $(document).ready(function(){
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
 
+</script>
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
 </script>
 </head>
 
@@ -222,7 +232,7 @@ $(document).ready(function(){
                           area in<a href="placematters.html" class="bold"> Place 
                           Matters </a>initiative <br>
                           <br>
-                          </em> 
+                          </em>
                           <a href="http://www.facebook.com/santamariacincy">
                           <img src="images/FacebookBadgeSmall.png" alt="Join us on Facebook" height="57px" width="179px" border="0" />                        
                           </a>
@@ -287,7 +297,8 @@ window.location = "mailto:"+document.eMailer.email.value+"?subject="+initialsubj
                                   </form>
                             </div></td>
                             <td width="25"><img src="images/spacer.gif" width="1" height="1"></td>
-                          </tr>
+			    <td><g:plusone size="tall"></g:plusone></td>
+			  </tr>
                         </table> 
                         <div align="left"> </div>
                         </td>
