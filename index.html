@@ -405,7 +405,14 @@ window.location = "mailto:"+document.eMailer.email.value+"?subject="+initialsubj
                                   <td width="209"><table width="209" border="0" cellspacing="0" cellpadding="0">
                                       <tr> 
                                         <td width="17"><img src="images/spacer.gif" width="1" height="1"></td>
-                                        <td width="174" valign="top"><form action="" method="post" name="form1" class="rightbottomblue">
+                                        <td width="174" valign="top"><form onSubmit="alert('Thank you for joining our newsletter mailing list.'); return true;" 
+                                        action="http://www.santamaria-cincy.org/cgi-sys/formmail.pl" method="post" name="form1" class="rightbottomblue">
+                                        <input type="hidden" name="recipient" value="leslie.schultz@santamaria-cincy.org">
+                                        <input type="hidden" name="redirect" value="http://www.santamaria-cincy.org/">
+                                        <input type="hidden" name="required" value="Email">
+                                        <input type="hidden" name="subject" value="Newsletter Request">
+
+
                                             <span class="rightbottomblue">Name:</span> 
                                             <br>
                                             <label for="textfield"></label>
