@@ -133,6 +133,17 @@ a.bottom:active {
 -->
 </style>
 <script language="JavaScript" src="mm_menu.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.2.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+   $.get("textData/quotes.txt", function(result){
+    var quotes = result.split("\n");
+    var randomnumber=Math.floor(Math.random()*quotes.length);
+    var selectedQuote = quotes[randomnumber];
+    $("#quotesDiv").html(selectedQuote);
+  });
+});
+</script>
 </head>
 
 <body onLoad="MM_preloadImages('images/homeaO_06.jpg','images/homeaO_08.jpg','images/homeO_19.jpg','images/homeO_20.jpg','images/homeO_21.jpg','images/homeO_14.jpg','images/homeO_15.jpg','images/homeO_16.jpg','images/homeO_17.jpg')">
@@ -198,8 +209,9 @@ a.bottom:active {
               </tr>
             </table></td>
         </tr>
+	<tr><td bgcolor="ffffff"><marquee><div id="quotesDiv"></div></marquee></td></tr>
 	<tr><td><div id="cse" style="width: 100%;">Loading</div>
-<script src="http://www.google.com/jsapi" type="text/javascript"></script>
+	<script src="http://www.google.com/jsapi" type="text/javascript"></script>
 <script type="text/javascript"> 
   google.load('search', '1', {language : 'en'});
   google.setOnLoadCallback(function() {
