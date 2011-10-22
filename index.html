@@ -99,6 +99,19 @@ $(document).ready(function(){
   });
 });
 </script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-26493427-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
 </head>
 
 <body onLoad="MM_preloadImages('images/homeaO_06.jpg','images/homeaO_08.jpg','images/homeO_19.jpg','images/homeO_20.jpg','images/homeO_21.jpg','images/homeO_14.jpg','images/homeO_15.jpg','images/homeO_16.jpg','images/homeO_17.jpg')">
@@ -106,7 +119,7 @@ $(document).ready(function(){
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
   <tr> 
     <td>&nbsp;</td>
-    <td width="851"><table width="851" border="0" cellspacing="0" cellpadding="0">
+    <td class="box_shadow" width="851"><table width="851" border="0" cellspacing="0" cellpadding="0">
         <tr> 
           <td width="851"><table width="851" border="0" cellspacing="0" cellpadding="0">
               <tr> 
@@ -164,18 +177,26 @@ $(document).ready(function(){
               </tr>
             </table></td>
         </tr>
-	<tr><td bgcolor="ffffff"><marquee><div id="quotesDiv"></div></marquee></td></tr>
-	<tr><td><div id="cse" style="width: 100%;">Loading</div>
-	<script src="http://www.google.com/jsapi" type="text/javascript"></script>
-<script type="text/javascript"> 
-  google.load('search', '1', {language : 'en'});
-  google.setOnLoadCallback(function() {
-    var customSearchControl = new google.search.CustomSearchControl('009406236431609615084:xwx5ucedai0');
-    customSearchControl.setResultSetSize(google.search.Search.SMALL_RESULTSET);
-    customSearchControl.draw('cse');
-  }, true);
-</script>
-<link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css" type="text/css" /></td></tr>
+        <tr>
+          <td bgcolor="ffffff">
+            <marquee><div id="quotesDiv"></div></marquee>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div id="cse" style="width: 100%;"></div>
+            <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+            <script type="text/javascript"> 
+              google.load('search', '1', {language : 'en'});
+              google.setOnLoadCallback(function() {
+                var customSearchControl = new google.search.CustomSearchControl('009406236431609615084:xwx5ucedai0');
+                customSearchControl.setResultSetSize(google.search.Search.SMALL_RESULTSET);
+                customSearchControl.draw('cse');
+              }, true);
+            </script>
+            <link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css" type="text/css" />
+          </td>
+        </tr>
         <tr> 
           <td bgcolor="ffffff"><table width="851" border="0" cellspacing="0" cellpadding="0">
               <tr> 
@@ -197,11 +218,7 @@ $(document).ready(function(){
                           read about Santa Maria in the news, <a href="inthenews.html">click 
                           here!</a></strong></em></font></p>
                         <p class="boldheader">Santa Maria
-                          <object width="180" height="108" align="right">
-                            <param name="movie" value="http://www.youtube.com/v/UzjiliBTBic&hl=en&fs=1&showinfo=0">
-                            <param name="allowFullScreen" value="true">
-                            <param name="allowscriptaccess" value="always">
-                            <embed src="http://www.youtube.com/v/UzjiliBTBic&hl=en&fs=1&showinfo=0" width="180" height="108" align="right" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true"></embed></object>
+                          <iframe width="520" height="305" src="http://www.youtube.com/embed/UzjiliBTBic" frameborder="0" allowfullscreen></iframe>
                         </p>
                         <ul>
                           <li class="bodyhome">Provides support to more than 4,000 
@@ -301,10 +318,33 @@ window.location = "mailto:"+document.eMailer.email.value+"?subject="+initialsubj
                     <tr> 
                       <td width="237"><table width="237" border="0" cellspacing="0" cellpadding="0">
                           <tr> 
-                            <td width="13" bgcolor="#6699FF">&nbsp;</td>
+                            <td class="box_round" width="13" bgcolor="#6699FF">&nbsp;</td>
                             <td width="209" valign="top" bgcolor="#6699FF"><table width="209" border="0" cellspacing="0" cellpadding="0">
                                 <tr> 
                                   <td width="209" height="10"><img src="images/spacer.gif" width="1" height="1"></td>
+                                </tr>
+                                <tr> 
+                                  <td width="209" height="23" background="images/homed_31.jpg"><table width="209" border="0" cellspacing="0" cellpadding="0">
+                                      <tr> 
+                                        <td width="10" height="23"><img src="images/spacer.gif" width="1" height="1"></td>
+                                        <td valign="middle" class="rightwhite">:: 
+                                          Search</td>
+                                      </tr>
+                                    </table></td>
+                                </tr>
+                                <tr> 
+                                  <td width="209" height="12"><img src="images/spacer.gif" width="1" height="1"></td>
+                                </tr>
+                                <tr> 
+                                  <td width="209"><table width="209" border="0" cellspacing="0" cellpadding="0">
+                                      <tr> 
+                                        <td width="17"><img src="images/spacer.gif" width="1" height="1"></td>
+                                        <td width="174" valign="top">
+
+                                        </td>
+                                        <td width="18"><img src="images/spacer.gif" width="1" height="1"></td>
+                                      </tr>
+                                    </table></td>
                                 </tr>
                                 <tr> 
                                   <td width="209" height="23" background="images/homed_31.jpg"><table width="209" border="0" cellspacing="0" cellpadding="0">
@@ -319,9 +359,9 @@ window.location = "mailto:"+document.eMailer.email.value+"?subject="+initialsubj
                                   <td width="209" height="12"><img src="images/spacer.gif" width="1" height="1"></td>
                                 </tr>
                                 <tr> 
-                                  <td width="209"><table width="209" height="536" border="0" cellpadding="0" cellspacing="0">
+                                  <td width="209"><table width="209" border="0" cellpadding="0" cellspacing="0">
                                       <tr> 
-                                        <td width="17" height="377"><img src="images/spacer.gif" width="1" height="1"></td>
+                                        <td width="17"><img src="images/spacer.gif" width="1" height="1"></td>
                                         <td width="173" valign="top"><p align="left"><span class="rightwhite">Join 
                                             Santa Maria at these upcoming events!<br>
                                             <br>
@@ -355,7 +395,7 @@ window.location = "mailto:"+document.eMailer.email.value+"?subject="+initialsubj
                                     </table></td>
                                 </tr>
                               </table></td>
-                            <td width="15" bgcolor="#6699FF">&nbsp;</td>
+                            <td class="box_round" width="15" bgcolor="#6699FF">&nbsp;</td>
                           </tr>
                         </table></td>
                     </tr>
@@ -427,12 +467,20 @@ window.location = "mailto:"+document.eMailer.email.value+"?subject="+initialsubj
             </table></td>
         </tr>
         <tr> 
-          <td width="851" height="35" align="center" valign="middle" bgcolor="000000" class="footer">Â©2008 
-            Santa Maria Community Services | <a href="index.html" class="bottom">Home</a> 
-            | <a href="affordablehousing.html" class="bottom">Programs</a> | <a href="mission.html" class="bottom">About 
-            Us</a> | <a href="inthenews.html" class="bottom">News</a> | <a href="birthdaybrunch.html" class="bottom">Events</a> 
-            | <a href="makeadonation.html" class="bottom">Support Us</a> | <a href="contactus.html" class="bottom">Contact 
-            Us</a> | <a href="mailto:donor@santamaria-cincy.org" class="bottom">info@santamaria-cincy.org</a></td>
+          <td width="851" height="35" align="center" valign="middle" bgcolor="000000">
+              <span class="footer">
+                  ©2008 Santa Maria Community Services | 
+                  <a href="index.html" class="bottom">Home</a> | 
+                  <a href="affordablehousing.html" class="bottom">Programs</a> | 
+                  <a href="mission.html" class="bottom">About Us</a> | 
+                  <a href="inthenews.html" class="bottom">News</a> | 
+                  <a href="birthdaybrunch.html" class="bottom">Events</a> | 
+                  <a href="makeadonation.html" class="bottom">Support Us</a> | 
+                  <a href="contactus.html" class="bottom">Contact Us</a> | 
+                  <a href="sitemap.html" class="bottom">Site Map</a> |
+                  <br> <a href="mailto:info@santamaria-cincy.org" class="bottom">info@santamaria-cincy.org</a>
+              </span>
+          </td>
         </tr>
       </table></td>
     <td>&nbsp;</td>
