@@ -134,22 +134,26 @@ a.bottom:active {
 	padding-bottom: 5px;
 }
 
-.box_shadow {
+body > table > tbody > tr > td:nth-child(2) {
      -moz-box-shadow: 0px 0px 40px #000; /* FF3.5+ */
   -webkit-box-shadow: 0px 0px 40px #000; /* Saf3.0+, Chrome */
           box-shadow: 0px 0px 40px #000; /* Opera 10.5, IE9, Chrome 10+ */
 }
 
-.box_round {
-     -moz-border-radius: 4px; 
-  -webkit-border-radius: 4px; 
-          border-radius: 4px; 
+.sidebar-shadow {
+     -moz-box-shadow: -2px 6px 5px #000; /* FF3.5+ */
+  -webkit-box-shadow: -2px 6px 5px #000; /* Saf3.0+, Chrome */
+          box-shadow: -2px 6px 5px #000; /* Opera 10.5, IE9, Chrome 10+ */
 }
 
-#quotesDiv {
-	font-family: "Lucida Grande","Lucida Sans",Arial,Helvetica,sans-serif;
-  margin: 20px 0;
-	font-style: italic;
-	font-weight: bold;
+.marquee {
+    font-family: "Lucida Grande","Lucida Sans",Arial,Helvetica,sans-serif;
+    margin: 20px 0;
+    font-style: italic;
+    font-weight: bold;
+    color: blue;
 }
 
+img.share {
+  max-width: 145px;
+}

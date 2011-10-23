@@ -90,16 +90,18 @@ function MM_swapImage() { //v3.0
 </style>
 <script language="JavaScript" src="mm_menu.js"></script>
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.6.2.min.js"></script>
+<script type="text/javascript" src="js/jquery.marquee.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){
-   $.get("textData/quotes.txt", function(result){
+  $.get("textData/quotes.txt", function(result){
     var quotes = result.split("\n");
     var randomnumber=Math.floor(Math.random()*quotes.length);
     if(randomnumber >= quotes.length){
-       randomnumber = 0;
+      randomnumber = 0;
     }
     var selectedQuote = quotes[randomnumber];
-    $("#quotesDiv").html(selectedQuote);
+    $("marquee").html(selectedQuote);
+    $('marquee').marquee('marquee');
   });
 });
 </script>
@@ -130,7 +132,7 @@ $(document).ready(function(){
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
   <tr> 
     <td>&nbsp;</td>
-    <td class="box_shadow" width="851"><table width="851" border="0" cellspacing="0" cellpadding="0">
+    <td width="851"><table width="851" border="0" cellspacing="0" cellpadding="0">
         <tr> 
           <td width="851"><table width="851" border="0" cellspacing="0" cellpadding="0">
               <tr> 
@@ -190,7 +192,7 @@ $(document).ready(function(){
         </tr>
         <tr>
           <td bgcolor="ffffff">
-            <marquee><div id="quotesDiv"></div></marquee>
+            <marquee behavior="scroll" scrollamount="2" direction="left"></marquee>
           </td>
         </tr>
         <tr> 
@@ -202,7 +204,8 @@ $(document).ready(function(){
                       <td width="513" height="24"><img src="images/spacer.gif" width="1" height="1"></td>
                     </tr>
                     <tr> 
-                      <td width="513"><p class="subpageheader"><em>Helping Families Help 
+                      <td width="513">
+                        <p class="subpageheader"><em>Helping Families Help 
                           Themselves...<br>
                           Since 1897</em></p>
                         <p class="bodyhome">Santa Maria Community Services provides 
@@ -213,7 +216,7 @@ $(document).ready(function(){
                         <p class="bodyhome"><font color="#000066" face="Arial, Helvetica, sans-serif"><em><strong>To 
                           read about Santa Maria in the news, <a href="inthenews.html">click 
                           here!</a></strong></em></font></p>
-                        <p class="boldheader">Santa Maria
+                        <p class="subpageheader"><em>Santa Maria...</em>
                           <object width="180" height="108" align="right">
                             <param name="movie" value="http://www.youtube.com/v/UzjiliBTBic&hl=en&fs=1&showinfo=0">
                             <param name="allowFullScreen" value="true">
@@ -227,32 +230,34 @@ $(document).ready(function(){
                           <li class="bodyhome">Employs 40 staff and engages more than 500 volunteers who give more than 20,000 hours of their time annually.</li>
                         </ul>
                         <p>&nbsp; </p>
-                        <p class="bodyhome"><em>In 2007 Santa Maria was chosen 
-                          to be a lead agency in Early Childhood/Youth Development 
-                          area in<a href="placematters.html" class="bold"> Place 
-                          Matters </a>initiative <br>
-                          <br>
-                          </em>
-                          <a href="http://www.facebook.com/santamariacincy">
-                          <img src="images/FacebookBadgeSmall.png" alt="Join us on Facebook" height="57px" width="179px" border="0" />                        
-                          </a>
+                        <p class="bodyhome">
+                          <em>In 2007 Santa Maria was chosen to be a lead agency in Early Childhood/Youth Development area in<a href="placematters.html" class="bold"> Place Matters </a>initiative</em>
+                        </p>
+                        <p class="subpageheader"><em>Tell a friend about Santa
+                        Maria</em></p>
+                        <p class="bodyhome">
+                          <div style="float: left;">
+                            <a href="http://www.facebook.com/santamariacincy">
+                              <img src="images/FacebookBadgeSmall.png" alt="Join us on Facebook" height="57px" width="179px" border="0" />
+                            </a>
+                            <p style="font-size: 8px; padding-left:10px;">
+                              <a href="http://www.facebook.com/pages/Santa-Maria-Community-Services-Inc/309191788581">Santa Maria Community Services, Inc.</a> on Facebook
+                            </p>
+                          </div>
                           &nbsp;&nbsp;
                           <a href="http://twitter.com/#!/SantaMariaCincy">
-                          <img src="images/twitter_badge.jpg" alt="Follow Us on Twitter" border="0" height="72px" width="90px" />
+                            <img class="share" src="images/twitter_badge.jpg" alt="Follow Us on Twitter" border="0" height="72px" width="90px" />
                           </a>
                           &nbsp;&nbsp;
                           <a href="http://www.youtube.com/v/UzjiliBTBic&hl=en&fs=1&showinfo=0">
-                          <img src="images/youtube_logo_small_Cropped.jpg" alt="Our YouTube Video" border="0" />
+                            <img class="share" src="images/youtube_logo_small_Cropped.jpg" alt="Our YouTube Video" border="0" />
                           </a>
-                        <div align="left" style="font-size:8px; padding-left:10px"><a href="http://www.facebook.com/pages/Santa-Maria-Community-Services-Inc/309191788581">Santa 
-                          Maria Community Services, Inc.</a> on Facebook<br>
-                          <br>
-                        </div>
-                        <br>
-                        <table width="200" border="0" cellpadding="0" cellspacing="0">
-                          <tr>
-                            <td><div align="left"> 
-                                <SCRIPT LANGUAGE="JavaScript">
+                          &nbsp;&nbsp;
+                          <g:plusone size="tall"></g:plusone>
+                        </p>
+                        <p>&nbsp; </p>
+                        <p class="bodyhome">
+                          <SCRIPT LANGUAGE="JavaScript">
 <!-- Begin
 
 //Script by Trånn: http://come.to/tronds
@@ -286,25 +291,20 @@ window.location = "mailto:"+document.eMailer.email.value+"?subject="+initialsubj
    }
 }
 //  End -->
-                        </script>
-                                <form name="eMailer">
-                                  <span class="bold">Tell a friend about 
-                                  <br>
-                                  Santa Maria: </span>
-                                  <input type="text" name="email" size="18" value="Enter Address Here" onFocus="this.value=''" onMouseOver="window.status='Enter email address here and tell a friend about this site...'; return true" onMouseOut="window.status='';return true">
-                                  <br>
-                                  <input type="button" value="Send this URL" onMouseOver="window.status='Click to send an email (with this page address) to a friend! Enter email address above...'; return true" onMouseOut="window.status='';return true" onClick="mailThisUrl();">
-                                  </form>
-                            </div></td>
-                            <td width="25"><img src="images/spacer.gif" width="1" height="1"></td>
-			    <td><g:plusone size="tall"></g:plusone></td>
-			  </tr>
-                        </table> 
-                        <div align="left"> </div>
-                        </td>
+                          </script>
+                          <form name="eMailer" class="bodyhome">
+                            Email a friend about Santa Maria:
+                            <br>
+                            <input type="text" name="email" size="18" value="Enter Address Here" onFocus="this.value=''" onMouseOver="window.status='Enter email address here and tell a friend about this site...'; return true" onMouseOut="window.status='';return true">
+                            <br>
+                            <input type="button" value="Send this URL" onMouseOver="window.status='Click to send an email (with this page address) to a friend! Enter email address above...'; return true" onMouseOut="window.status='';return true" onClick="mailThisUrl();">
+                          </form>
+                        </p>
+                        <p>&nbsp; </p>
+                      </td>
                     </tr>
                     <tr> 
-                      <td width="513" height="45"><p><font face="Arial, Helvetica, sans-serif"><strong><font size="2">For 
+                      <td width="513" height="45"><p><font face="Arial, Helvetica, sans-serif"><strong><font size="1">For 
                           information regarding Santa Maria's Privacy Policy, 
                           <a href="PRIVNOTICE0810.doc">click here</a>.</font></strong><font size="2"><br>
                           </font></font></p>
@@ -323,9 +323,9 @@ window.location = "mailto:"+document.eMailer.email.value+"?subject="+initialsubj
                 <td width="46"><img src="images/spacer.gif" width="1" height="1"></td>
                 <td width="237" valign="top" bgcolor="#6699FF"><table width="237" border="0" cellspacing="0" cellpadding="0">
                     <tr> 
-                      <td width="237"><table width="237" border="0" cellspacing="0" cellpadding="0">
+                      <td width="237"><table class="sidebar-shadow" width="237" border="0" cellspacing="0" cellpadding="0">
                           <tr> 
-                            <td class="box_round" width="13" bgcolor="#6699FF">&nbsp;</td>
+                            <td width="13" bgcolor="#6699FF">&nbsp;</td>
                             <td width="209" valign="top" bgcolor="#6699FF"><table width="209" border="0" cellspacing="0" cellpadding="0">
                                 <tr> 
                                   <td width="209" height="10"><img src="images/spacer.gif" width="1" height="1"></td>
@@ -335,7 +335,8 @@ window.location = "mailto:"+document.eMailer.email.value+"?subject="+initialsubj
                                       <tr> 
                                         <td width="10" height="23"><img src="images/spacer.gif" width="1" height="1"></td>
                                         <td valign="middle" class="rightwhite">:: 
-                                          Search This Site</td>
+                                          Search This Site
+                                        </td>
                                       </tr>
                                     </table></td>
                                 </tr>
@@ -366,6 +367,9 @@ window.location = "mailto:"+document.eMailer.email.value+"?subject="+initialsubj
                                     </table></td>
                                 </tr>
                                 <tr> 
+                                  <td width="209" height="12"><img src="images/spacer.gif" width="1" height="1"></td>
+                                </tr>
+                                <tr> 
                                   <td width="209" height="23" background="images/homed_31.jpg"><table width="209" border="0" cellspacing="0" cellpadding="0">
                                       <tr> 
                                         <td width="10" height="23"><img src="images/spacer.gif" width="1" height="1"></td>
@@ -378,9 +382,9 @@ window.location = "mailto:"+document.eMailer.email.value+"?subject="+initialsubj
                                   <td width="209" height="12"><img src="images/spacer.gif" width="1" height="1"></td>
                                 </tr>
                                 <tr> 
-                                  <td width="209"><table width="209" border="0" cellpadding="0" cellspacing="0">
+                                  <td width="209"><table width="209" height="536" border="0" cellpadding="0" cellspacing="0">
                                       <tr> 
-                                        <td width="17"><img src="images/spacer.gif" width="1" height="1"></td>
+                                        <td width="17" height="377"><img src="images/spacer.gif" width="1" height="1"></td>
                                         <td width="173" valign="top"><p align="left"><span class="rightwhite">Join 
                                             Santa Maria at these upcoming events!<br>
                                             <br>
@@ -414,12 +418,12 @@ window.location = "mailto:"+document.eMailer.email.value+"?subject="+initialsubj
                                     </table></td>
                                 </tr>
                               </table></td>
-                            <td class="box_round" width="15" bgcolor="#6699FF">&nbsp;</td>
+                            <td width="15" bgcolor="#6699FF">&nbsp;</td>
                           </tr>
                         </table></td>
                     </tr>
                     <tr> 
-                      <td width="237" bgcolor="#6699FF"><table width="237" border="0" cellspacing="0" cellpadding="0">
+                      <td width="237" bgcolor="#6699FF"><table class="sidebar-shadow" width="237" border="0" cellspacing="0" cellpadding="0">
                           <tr> 
                             <td width="13" valign="top" bgcolor="#6699FF">&nbsp;</td>
                             <td width="209" valign="top" bgcolor="#6699FF"><table width="209" border="0" cellspacing="0" cellpadding="0">
